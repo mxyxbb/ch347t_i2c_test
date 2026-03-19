@@ -49,8 +49,9 @@ int main() {
     RetVal = CH347I2C_SetStretch(0, TRUE);
 	printf("CH347 I2C set stetching %s\n",RetVal ? "succ" : "failure");
 
-	RetVal = CH347I2C_SetDriverMode(0, 1);
-	printf("CH347 I2C set push-pull %s\n", RetVal ? "succ" : "failure");
+	// default in open-drain mode, works fine
+	//RetVal = CH347I2C_SetDriverMode(0, 1);
+	//printf("CH347 I2C set push-pull %s\n", RetVal ? "succ" : "failure");
 
     printf("CH347InitI2C %s\n\n",RetVal ? "succ" : "failure");
 
