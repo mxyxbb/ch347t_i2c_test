@@ -10,10 +10,13 @@ Everything works fine.
 400kHz timing, clock stretch: yes, push-pull yes  
 <img width="1384" height="219" alt="image" src="https://github.com/user-attachments/assets/2dab0f9c-3594-4752-96c1-845ae99b142b" />  
 
-          // enable stretch
-          CH347I2C_SetStretch(0, TRUE);
-          // set driver push-pull
-          CH347I2C_SetDriverMode(0, 1);
+Accurate delay can be set by api 'CH347I2C_SetDelaymS'  
+This is a blocking function which will block your process for milisecond you set.  
+The following picture shows a 10ms delay by the api.  
+<img width="1613" height="224" alt="image" src="https://github.com/user-attachments/assets/b5f4f93c-7c4f-4836-bd47-b933fc3b543e" />
+
+
+
 
 The example terminal output:  
 <img width="662" height="1014" alt="image" src="https://github.com/user-attachments/assets/9908d77c-8dfd-4069-af38-e1b6d2c1284f" />
