@@ -58,7 +58,9 @@ int main() {
     //ACK测试，向I2C总线发送一个设备地址，查看是否有设备响应ACK
     OutBuf[0] = 0x59<<1; // I2C设备地址8bit
     RetVal = CH347StreamI2C_RetACK(0, 1, OutBuf, 0, NULL, &AckCount);
-    printf("CH347 I2C write 0x59 ACK count: %d\n",  AckCount);
+    //printf("CH347 I2C write 0x59 ACK count: %d\n",  AckCount);
+	//To test the delayms api, I can't print anything above.
+	CH347I2C_SetDelaymS(0, 10);
     OutBuf[0] = 0x60<<1; // I2C设备地址8bit
     RetVal = CH347StreamI2C_RetACK(0, 1, OutBuf, 0, NULL, &AckCount);
     printf("CH347 I2C write 0x60 ACK count: %d\n",  AckCount);
